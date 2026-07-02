@@ -1,0 +1,347 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #000000;
+}
+
+.fixed-header {
+  position: sticky;
+  top: 0;
+  background: #212121;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  z-index: 100;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  height: 70px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+  color: rgb(0, 142, 0);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.365);
+  font-weight: 700;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.new-note-btn {
+  background: linear-gradient(135deg, #00b300, #009a00);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.new-note-btn:hover {
+  background: linear-gradient(135deg, #00b300, #009a00);
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+}
+
+.new-note-btn:active {
+  transform: scale(0.96);
+}
+
+.new-note-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 184, 148, 0.25);
+}
+
+.Icon:hover {
+  color: white;
+}
+
+.add-note-box {
+  width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #222;
+  border: 2px solid #00b300;
+  border-radius: 12px;
+}
+
+.add-note-box input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #00b300;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  box-sizing: border-box;
+}
+
+.add-btns {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.add-btns button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-btns button:first-child {
+  background: #00b300;
+  color: white;
+}
+
+.cancel-btn {
+  background: #ff4040;
+  color: white;
+}
+/* Dark background */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup */
+.add-note-modal {
+  width: 420px;
+  background: #1f1f1f;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  animation: popup 0.3s ease;
+}
+
+.add-note-modal h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-note-modal input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #00b894;
+  border-radius: 8px;
+  outline: none;
+  background: #2d2d2d;
+  color: white;
+  box-sizing: border-box;
+}
+
+.add-note-modal input:focus {
+  border-color: #00e676;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.save-btn {
+  background: #00b300;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #009400;
+}
+
+.cancel-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #c0392b;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* MainBody CSS */
+
+body {
+  margin: 0;
+  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.task-container {
+  width: 70%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.task-text {
+  font-size: 19px;
+}
+.task-card {
+  background: #1d1d1d;
+  border: 2px solid #00b300;
+  border-radius: 12px;
+  padding: 18px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.task-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.task-content h3 {
+  color: #00cc00;
+  margin-bottom: 10px;
+}
+
+.task-content p {
+  color: #ddd;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.task-actions button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background: #00b300;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #009900;
+}
+
+.delete-btn {
+  background: #ff3b3b;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #d60000;
+}
+.update-box {
+  display: flex;
+  align-items: center;
+  background: #2b2b2b;
+  border: 2px solid #00b300;
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.update-box input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  background: #1f1f1f;
+  color: white;
+  font-size: 12px;
+  outline: none;
+}
+
+.update-box input:focus {
+  border-color: #00ff00;
+}
+
+.update-box button {
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cancel-btn {
+  border-radius: 0 10px 10px 0;
+}
+
+.update-box button:first-of-type {
+  background: #00b300;
+  color: white;
+}
+
+.update-box button:first-of-type:hover {
+  background: #009900;
+}
+
+.cancel-btn {
+  background: #ff4040;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #d80000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
