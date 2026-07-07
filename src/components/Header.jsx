@@ -5,7 +5,6 @@ import { MdMenuBook } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Components.css'
-import logo from "../assets/logo.png";
 import axios from "axios";
 
 function Header() {
@@ -56,7 +55,6 @@ function Header() {
             <nav className="fixed-header">
                 <div className="navbar container">
                     <div className="logo d-flex">
-                        <img src={logo} alt="Logo" className="logo-img" />
                         <h1>NoteFlow</h1>
                     </div>
 
